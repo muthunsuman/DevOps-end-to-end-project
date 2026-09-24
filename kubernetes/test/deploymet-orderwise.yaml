@@ -1,0 +1,12 @@
+resources:
+  - namespace.yaml
+  - secret.yaml
+  - configmap.yaml
+  - pvc.yaml
+  - postgres.yaml
+  - backend.yaml
+  - back-end-app-service.yaml
+  - frontend.yaml
+  - ingress.yaml
+  - hpa.yaml
+  - networkpolicy.yaml

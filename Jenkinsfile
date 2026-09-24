@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkout scm
+               git branch: 'main', git url: "https://github.com/muthunsuman/DevOps-end-to-end-project.git", 
             }
         }
 
