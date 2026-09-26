@@ -3,14 +3,13 @@ kind: Application
 metadata:
   name: ecommerce-dev
   namespace: argocd
-
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/muthunsuman/DevOps-end-to-end-project.git
+    repoURL: https://github.com/muthunsuman/devops-gitops-manifests.git
     targetRevision: main
-    path: kubernetes/dev
+    path: .
 
   destination:
     server: https://kubernetes.default.svc
