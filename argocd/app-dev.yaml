@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/muthunsuman/devops-gitops-manifests.git
+    repoURL: https://github.com/muthunsuman/DevOps-end-to-end-project.git
     targetRevision: main
     path: .
 
