@@ -1,14 +1,21 @@
-global:
-  scrape_interval: 15s
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
 
-scrape_configs:
-  - job_name: 'backend'
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets:
-          - backend-service:8080
+data:
+  prometheus.yml: |
+    global:
+      scrape_interval: 15s
 
-  - job_name: 'kubernetes'
-    static_configs:
-      - targets:
-          - kube-state-metrics:8080
+    scrape_configs:
+      - job_name: 'backend'
+        metrics_path: '/actuator/prometheus'
+        static_configs:
+          - targets:
+              - backend-service:8080
+
+      - job_name: 'kubernetes'
+        static_configs:
+          - targets:
+              - kube-state-metrics:8080
