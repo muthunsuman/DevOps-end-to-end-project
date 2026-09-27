@@ -27,16 +27,3 @@ spec:
           value: "password"
         - name: SPRING_JPA_HIBERNATE_DDL_AUTO
           value: "update"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backend-service
-  namespace: ecommerce-dev
-spec:
-  selector:
-    app: backend
-  ports:
-    - port: 8080
-      targetPort: 8080
-  type: ClusterIP
